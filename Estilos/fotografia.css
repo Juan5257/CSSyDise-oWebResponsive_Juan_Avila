@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background-color:  #02010a;
+	font-family: 'Dancing Script', cursive;
+}
+img{
+	filter: drop-shadow(2px 2px #02010a);
+}
+#cabecera{
+	background-color: #5b7989;
+	text-shadow: 2px 2px  #02010a;
+	border-radius: 10px 10px 0 0;
+	text-decoration:none;
+	width: 100%;
+	color: white
+}
+#cabecera nav a{
+	color: white;
+	text-decoration: none;
+}
+.subpag{
+	text-decoration: underline  !important
+}
+#img_velero{
+	width: 100%;
+	background-color: #82c3a6
+}
+#img_velero figure img{
+	width: 80%;
+	margin: 40px 10%;
+	padding: 0;
+}
+#img_secundarias{
+	background-color: #d5c75f;
+	width: 100%;
+	border: solid 1px;
+}
+#img_secundarias figure{
+	text-align: center;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	font-size: 2em;
+
+}
+#img_secundarias figure img{
+	width: 80%;
+	height: 5em;
+	filter: drop-shadow(2px 2px #82c3a6)!important;
+	border: solid 2px;
+}
+.paisaje-index{
+	transform: rotate(0deg);
+	transition: transform 1s;
+
+}
+.paisaje-index:hover{
+	transform: rotate(10deg);
+}
+.retrato-index{
+	transform: translateX(0px) translateY(0px);
+	transition: transform 1s;
+}
+.retrato-index:hover{
+	transform: translateX(20px) translateY(-5px);
+}
+footer{
+	width: 100%;
+	border-radius: 0 0 10px 10px;
+	background-color: #C6d5c5;
+	display: flex;
+}
+footer div{
+	text-align: center;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+footer div ul{
+	list-style-type: none;
+}
+footer div ul li{
+	color: initial;
+	text-decoration: none;
+	text-align: center;
+	font-size: 0.9em;
+}
+footer div ul li a{
+	text-decoration: none;
+	color: initial;
+}
+.iconos{
+	width: 0.5em;
+	height: 0.75em;
+	background-color: white;
+}
+@media(min-width:900px){
+	#contenido{
+		width: 900px;
+		margin: auto;
+	}
+	#cabecera{
+		display: inline-flex;
+	}
+	#cabecera header{
+		flex-grow: 1;
+		margin-bottom: 0.5em;
+		margin-left: 0.75em;
+	}
+	h1{
+		font-size: 2em;
+	}
+	#cabecera nav{
+		flex-grow: 1;
+		margin-right: 0.75em;
+	}
+	#cabecera nav p{
+		text-align: right;
+		font-size: 1.5em;
+		margin-top: 0.5em;
+	}
+	#img_secundarias{
+		display: inline-flex;
+		flex-direction: row;
+	}
+	#img_secundarias figure{
+		flex-grow: 1;
+	}
+}
+footer{
+	flex-direction: row;
+}
+footer div{
+	flex-grow: 1
+}
+@media(max-width:899px){
+	#contenido{
+		width: 100%;
+	}
+	h1{
+		text-align: center;
+		padding: 0.5em;
+	}
+	#cabecera nav p{
+		text-align: center;
+		font-size: 1.5em;
+		padding: 0.5em;
+	}
+	footer {
+		flex-direction: column;
+	}
+}
