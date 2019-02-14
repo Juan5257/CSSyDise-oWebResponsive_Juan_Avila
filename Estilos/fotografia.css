@@ -40,11 +40,12 @@ img{
 }
 #img_secundarias figure{
 	text-align: center;
-	text-decoration: underline;
 	margin-top: 1em;
 	margin-bottom: 1em;
 	font-size: 2em;
-
+}
+#img_secundarias p{
+	text-decoration: underline;
 }
 #img_secundarias figure img{
 	width: 80%;
