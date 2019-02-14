@@ -13,7 +13,6 @@ img{
 #cabecera{
 	background-color: #5b7989;
 	text-shadow: 2px 2px  #02010a;
-	border-radius: 10px 10px 0 0;
 	text-decoration:none;
 	width: 100%;
 	color: white
@@ -41,6 +40,7 @@ img{
 }
 #img_secundarias figure{
 	text-align: center;
+	text-decoration: underline;
 	margin-top: 1em;
 	margin-bottom: 1em;
 	font-size: 2em;
@@ -69,7 +69,6 @@ img{
 }
 footer{
 	width: 100%;
-	border-radius: 0 0 10px 10px;
 	background-color: #C6d5c5;
 	display: flex;
 }
@@ -96,6 +95,32 @@ footer div ul li a{
 	height: 0.75em;
 	background-color: white;
 }
+#galeria{
+	background-color: #d5c75f;
+	width: 100%;
+	border: solid 1px;
+}
+#galeria img[title="paisaje degradado"]{
+	filter: blur(10px);
+}
+#galeria figure:nth-child(even){
+	filter: grayscale(100%);
+}
+#galeria figure:nth-child(3){
+	filter: sepia(90%);
+}
+#contenido{
+	animation: animacion_contenido 2s;
+}
+@-webkit-keyframes animacion_contenido{
+	0%{
+		transform: translateY(100%);
+	}
+	100%{
+		transform: translateY(0%);
+	}
+}
+
 @media(min-width:900px){
 	#contenido{
 		width: 900px;
@@ -103,6 +128,7 @@ footer div ul li a{
 	}
 	#cabecera{
 		display: inline-flex;
+		border-radius: 10px 10px 0 0;
 	}
 	#cabecera header{
 		flex-grow: 1;
@@ -128,16 +154,30 @@ footer div ul li a{
 	#img_secundarias figure{
 		flex-grow: 1;
 	}
-}
+	#galeria figure{
+		width: 33.33%;
+	}
+	#galeria img{
+		width: 94%;
+		height: 200px;
+		margin: 30px 3% 30px 3%;
+	}
+	#galeria{
+		display: inline-flex;
+		flex-wrap: wrap;
+	}
 footer{
 	flex-direction: row;
+	border-radius: 0 0 10px 10px;
 }
 footer div{
 	flex-grow: 1
 }
+}
 @media(max-width:899px){
 	#contenido{
 		width: 100%;
+
 	}
 	h1{
 		text-align: center;
@@ -150,5 +190,9 @@ footer div{
 	}
 	footer {
 		flex-direction: column;
+	}
+	#galeria img{
+		width: 90%;
+		margin: 20px 5% 20px 5%;
 	}
 }
